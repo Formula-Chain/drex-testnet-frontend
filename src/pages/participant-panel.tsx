@@ -6,8 +6,10 @@ import styles from "../styles/Home.module.css";
 import { APP_NAME } from "../utils/constants";
 import { useDrexContracts } from "../hooks/useDrexContracts";
 import { ParticipantPanel as ParticipantPanelComponent } from "../components/ParticipantPanel";
+import { useSigner } from "wagmi";
 
 const ParticipantPanel: NextPage = () => {
+  const {data: signer} = useSigner();
   const [cjnp8, setCjnp8] = useState<string>("");
   const [cjnp8Input, setCjnp8Input] = useState<string>("");
   const [cjnpInputTimeout, setCjnpInputTimeout] = useState<

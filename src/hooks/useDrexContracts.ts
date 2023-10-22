@@ -142,6 +142,7 @@ export const useDrexContracts = (cjnp8: string | undefined) => {
           }
         }
 
+        setContracts(loadedContracts);
         setIsLoading(false);
       };
 

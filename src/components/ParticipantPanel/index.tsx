@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { Flex } from "@chakra-ui/layout";
 import styles from "../../styles/Home.module.css";
 import { DrexContracts } from "../../hooks/useDrexContracts";
 import { Box, StackDivider, VStack } from "@chakra-ui/react";
+import { TokenInfo } from "../TokenInfo";
 
 type ParticipantPanelProps = {
   isParticipant: boolean;
@@ -10,6 +10,10 @@ type ParticipantPanelProps = {
 };
 
 export const ParticipantPanel: FC<ParticipantPanelProps> = (props) => {
+  if (!props.contracts) {
+    return null;
+  }
+
   if (!props.isParticipant) {
     return <h2 className={styles.title}>Switch to participant wallet</h2>;
   }
@@ -20,9 +24,13 @@ export const ParticipantPanel: FC<ParticipantPanelProps> = (props) => {
       spacing={4}
       align="stretch"
     >
-      <Box>RealDigital info box placeholder</Box>
+      <Box>
+        <TokenInfo contract={props.contracts.RealDigital}/>
+      </Box>
       <Box>STR interface placeholder</Box>
-      <Box>RealTokenizado interface placeholder</Box>
+      <Box>
+        <TokenInfo contract={props.contracts.RealTokenizado!} />
+      </Box>
       <Box>RealDigitalDefaultAccount interface placeholder</Box>
       <Box>RealDigitalEnableAccount interface placeholder</Box>
     </VStack>
