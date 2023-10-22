@@ -1,10 +1,9 @@
-import { Button, Link, Grid, GridItem, Input } from "@chakra-ui/react";
+import { Grid, GridItem, Input } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "../styles/Home.module.css";
 import { APP_NAME } from "../utils/constants";
-import { theme } from "../styles/theme";
 import { useDrexContracts } from "../hooks/useDrexContracts";
 import { ParticipantPanel as ParticipantPanelComponent } from "../components/ParticipantPanel";
 
@@ -15,8 +14,6 @@ const ParticipantPanel: NextPage = () => {
     NodeJS.Timeout | undefined
   >();
   const { contracts, isParticipant, isLoading } = useDrexContracts(cjnp8);
-
-  let cjnp8Timeout: NodeJS.Timeout | undefined;
 
   return (
     <div className={styles.container}>
