@@ -21,6 +21,8 @@ import {
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { NavDrawerItem, NavItem } from './NavItem'
 
+import { APP_NAME } from '../../utils/constants'
+
 // @ts-ignore
 import { SocialIcon } from 'react-social-icons'
 
@@ -36,11 +38,6 @@ export const Header = () => {
     {
       text: 'about',
       href: '/about',
-      icon: <InformationCircleIcon className="h-6 w-6" />
-    },
-    {
-      text: '404 page',
-      href: '/error',
       icon: <InformationCircleIcon className="h-6 w-6" />
     }
   ]
@@ -58,8 +55,7 @@ export const Header = () => {
           <Box fontWeight="bold" fontSize={[20, 20, 20]}>
             <NextLink href="/" passHref>
               <Link className="center flex gap-2">
-                <span>👽</span>
-                <span className="text-xl">ilyxium</span>
+                <span className="text-xl">{APP_NAME}</span>
               </Link>
             </NextLink>
           </Box>
@@ -123,11 +119,11 @@ export const Header = () => {
               marginBottom="3rem"
               fontSize={[20, 20, 20]}
             >
-              
+
               <NextLink href="/">
                 <Link className="center flex gap-2">
                   <span>👽</span>
-                  <span className="text-xl">ilyxium</span>
+                  <span className="text-xl">{APP_NAME}</span>
                 </Link>
               </NextLink>
 
