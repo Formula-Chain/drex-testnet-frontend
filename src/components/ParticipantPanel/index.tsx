@@ -3,6 +3,8 @@ import styles from "../../styles/Home.module.css";
 import { DrexContracts } from "../../hooks/useDrexContracts";
 import { Box, StackDivider, VStack } from "@chakra-ui/react";
 import { TokenInfo } from "../TokenInfo";
+import { STR } from "./STR";
+
 
 type ParticipantPanelProps = {
   isParticipant: boolean;
@@ -27,7 +29,7 @@ export const ParticipantPanel: FC<ParticipantPanelProps> = (props) => {
       <Box>
         <TokenInfo contract={props.contracts.RealDigital}/>
       </Box>
-      <Box>STR interface placeholder</Box>
+      <Box><STR realDigital={props.contracts.RealDigital} str={props.contracts.STR} /></Box>
       <Box>
         <TokenInfo contract={props.contracts.RealTokenizado!} />
       </Box>

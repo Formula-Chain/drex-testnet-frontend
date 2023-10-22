@@ -4,3 +4,4 @@ export const DEPLOYED_CONTRACTS = {
     address: "0x7C4f2811ADa723ED804F1B0B0371a6b3e45C9B6A",
   },
 };
+export const REAL_DECIMALS = 2;
