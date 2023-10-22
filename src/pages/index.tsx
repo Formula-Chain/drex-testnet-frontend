@@ -19,6 +19,11 @@ const Home: NextPage = () => {
         </h2>
 
         <div className={styles.grid}>
+          <Link href="/participant-panel">
+            <Button colorScheme="purple" size="lg">
+              Participant Panel
+            </Button>
+          </Link>
         </div>
       </main>
     </div>
