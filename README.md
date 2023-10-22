@@ -23,7 +23,7 @@ npm ci
 ```
 
 Copy `.env.template` as `.env.local` and fill in the parameters:
-- `DREX_USERNAME` and `DREX_PASSWORD` - the credentials to connect to the testnet node. This will be sent to you via email after you fill in [the application form](https://forms.gle/UvsY9z4EC31aiQfG6)
+- `NEXT_PUBLIC_DREX_USERNAME` and `NEXT_PUBLIC_DREX_PASSWORD` - the credentials to connect to the testnet node. This will be sent to you via email after you fill in [the application form](https://forms.gle/UvsY9z4EC31aiQfG6)
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more information.
